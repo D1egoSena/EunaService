@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/painel.css">
+    <link rel="shortcut icon" href="img/logo.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Página de Pesquisa</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="home.html"><img class="img-logo" src="img/logo-name.png" alt="EunaService"></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Digite sua pesquisa...">
+            <select id="search-select">
+              <option value="">Selecione uma opção...</option>
+              <option value="opcao1">Opção 1</option>
+              <option value="opcao2">Opção 2</option>
+              <option value="opcao3">Opção 3</option>
+            </select>
+            <button id="search-button">Pesquisar</button>
+          </div>
+          <button id="btn-login" class="login-btn">Login</button>
+    </header>
+
+    <main>
+        <section class="resposta-pesquisa">
+            <div class="titulo">
+                <h1>Resultado da pesquisa: </h1>
+            </div>
+            <div class="area-de-resultados">
+                <div class="cards-servicos">
+                    <div class="coluna-1-s">
+                        <a href="painel.html">
+                            <img class="imagem-perfil" src="" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="cards-servicos">
+                    <div class="coluna-1-s">
+                        <a href="painel.html">
+                            <img class="imagem-perfil" src="" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="cards-servicos">
+                    <div class="coluna-1-s">
+                        <a href="painel.html">
+                            <img class="imagem-perfil" src="" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="cards-servicos">
+                    <div class="coluna-1-s">
+                        <a href="painel.html">
+                            <img class="imagem-perfil" src="" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script>
+    const searchInput = document.getElementById('search-input');
+    const searchSelect = document.getElementById('search-select');
+    const searchButton = document.getElementById('search-button');
+
+    searchSelect.addEventListener('change', () => {
+        searchInput.value = searchSelect.value;
+    });
+
+    searchButton.addEventListener('click', () => {
+        const searchTerm = searchInput.value;
+        // Faça algo com o termo de pesquisa...
+    });
+</script>
+</body>
+</html>
